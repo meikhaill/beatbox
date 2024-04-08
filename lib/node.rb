@@ -5,6 +5,10 @@ class Node
   def initialize(data, pointer = nil)
     @data = data
     @pointer = pointer
+    @@counter = 0
+    @count = @@counter 
+    @@counter += 1
+
   end
 
   def data

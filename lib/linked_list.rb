@@ -18,6 +18,18 @@ class LinkedList
     end
   end
 
+  def insert(n, item, root = @head)
+    n.times do
+      current_pointer = root 
+     
+  end
+
+  def prepend(item, root = @head)
+    new_head = Node.new(item)
+    new_head.pointer = @head 
+    @head = new_head
+  end
+
   def append(item, root = @head)
     new_node = Node.new(item)
     if @head == nil
