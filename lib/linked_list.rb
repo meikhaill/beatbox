@@ -18,12 +18,6 @@ class LinkedList
     end
   end
 
-  def insert(n, item, root = @head)
-    n.times do
-      current_pointer = root 
-     
-  end
-
   def prepend(item, root = @head)
     new_head = Node.new(item)
     new_head.pointer = @head 
@@ -48,4 +42,17 @@ class LinkedList
     return @counter
   end
 
+  def insert(index, value)
+    current = @head
+
+    (index - 1).times do
+      unless current == nil
+        current = current.pointer
+      end
+    end
+
+    new_node = Node.new(value)
+    new_node.pointer = current.pointer
+    current.pointer = new_node
+  end
 end
