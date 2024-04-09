@@ -19,7 +19,7 @@ class LinkedList
   end
 
   def find(index, num_of_elements)
-
+    
   end
 
   def pop
