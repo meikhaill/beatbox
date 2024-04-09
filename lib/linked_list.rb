@@ -18,6 +18,39 @@ class LinkedList
     end
   end
 
+  def find(index, num_of_elements)
+
+  end
+
+  def pop
+    current = @head
+    until current.pointer.pointer == nil
+      current = current.pointer
+      puts "this is the current #{current}"
+    end
+    current.pointer = nil
+  end
+
+  def includes?(value)
+    unless @head == nil
+      current = @head
+    end
+
+    if current == nil
+      return false
+    end
+
+    while current != nil
+      if current.data == value
+        puts "is true"
+        return true
+      end
+      current = current.pointer
+    end
+    puts "not true yet"
+    return false
+  end
+
   def prepend(item, root = @head)
     new_head = Node.new(item)
     new_head.pointer = @head 
