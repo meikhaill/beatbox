@@ -2,13 +2,13 @@ require_relative 'linked_list.rb'
 require_relative 'node.rb'
 
 class BeatBox 
-  attr_accessor :list, :beatcount
+  attr_accessor :list, :beatcount, :rate, :voice
   
   def initialize()
     @beatcount = beatcount
     @list = LinkedList.new
     @rate = 500
-    @voice = voice
+    @voice = "default"
     @list_counter = []
   end
 
@@ -20,6 +20,7 @@ class BeatBox
 
   def all
     puts @list.to_string
+    return @list.to_string
   end
 
   def count
@@ -38,9 +39,9 @@ class BeatBox
     @voice = "default"
   end
 
-  def voice(value)
-    @voice = voice
-  end
+  # def voice(value)
+  #   @voice = value
+  # end
   
   def play
     str = @list.to_string

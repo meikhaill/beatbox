@@ -71,8 +71,10 @@ class LinkedList
     end
   end
 
+  #with count, if an item is removed, it still counts it, WIP
+  #count also returns zero based, so + 1 is there to fix that, shouldnt be permanent
   def count
-    return @counter
+    return @counter + 1
   end
 
   def insert(index, value)
